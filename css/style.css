@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+:root {
+  --mainPink: #e42c88;
+  --lightPink: #ee8dbd;
+  --secondlightPink: #facbe3;
+  --mainYellow: rgb(249, 228, 148);
+  --mainWhite: #fff;
+  --mainBlack: #000;
+  --yellowTrans: rgba(249, 228, 148, 0.5);
+  --mainGrey: rgb(238, 238, 238);
+  --mainlightblue: rgb(28, 137, 145);
+  --lightblue: rgba(197, 241, 247, 0.6);
+  --secondlightblue: rgba(38, 210, 233, 0.6);
+  --lightbluetrans: rgba(205, 239, 245, 0.4);
+  --storeBlue: rgb(5, 106, 189);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Kaushan Script", cursive;
+  color: var(--mainBlack);
+}
+/* Global styles */
+h1 {
+  color: var(--mainPink)
+}
+h5, h3 {
+color: var(--mainlightblue);
+}
+.btn-pink {
+  color: var(--mainPink)!important;
+  border-color: var(--mainPink)!important;
+}
+.btn-blue {
+  color: var(--mainlightblue)!important;
+  border-color: var(--mainlightblue)!important;
+}
+.btn-blue:hover {
+color: var(--mainWhite)!important;
+background: var(--mainlightblue)!important;
+}
+.btn-pink:hover {
+color: var(--mainWhite)!important;
+background: var(--mainPink)!important;
+}
+/* Nav links */
+.navbar-toggler {
+  outline: none !important;
+}
+.nav-info {
+  color: var(--mainlightblue);
+}
+.toggler-icon {
+  font-size: 2.5rem;
+  color: var(--mainPink);
+}
+.nav-link {
+  color: var(--mainPink);
+  transition: all .8s ease-in-out;
+  font-size: 1.4rem;
+}
+.nav-link:hover {
+  color: var(--mainlightblue);
+}
+
+/* Cart styles */
+.cart-info__icon {
+  color:var(--mainlightblue);
+  cursor: pointer;
+}
+.cart-info {
+  border: 0.1rem solid var(--mainlightblue);
+  color: var(--mainlightblue);
+  border-radius: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+}
+.cart-info:hover {
+  background: var(--mainPink);
+  border-color: var(--mainPink);
+  color: var(--mainWhite);
+}
+.cart-info:hover .cart-info__icon{
+  color: var(--mainWhite);
+  }
+
+  /* Banner */
+  .max-height {
+    min-height: calc(100vh - 76px);
+    background: linear-gradient(var(--yellowTrans), var(--lightbluetrans)), url('../img/cc5.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .banner {
+    color: var(--mainPink);
+    margin-top: -4rem;
+  }
+  .banner-title {
+    color: var(--mainlightblue);
+    font-size: 4rem;
+  }
+  .banner-link {
+    font-size: 1.5rem;
+    color: var(--mainlightblue);
+    border: 0.2rem solid var(--mainlightblue);
+  }
+  .banner-link:hover {
+    background: var(--mainlightblue);
+    color: var(--mainWhite);
+  }
+
+  /* About */
+.about {
+  background: linear-gradient(var(--lightbluetrans), var(--yellowTrans)), url('../img/logoIcon.png');
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.about-img__container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-img__container::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: -1.7rem;
+  width: 100%;
+  height: 100%;
+  outline: 0.5rem solid var(--lightPink);
+  z-index: -1;
+  transition: all 1s linear;
+}
+.about-img__container:hover:before {
+  top: 0;
+  left: 0;
+}
+
+/* Store */
+.store {
+  background: var(--lightbluetrans);
+}
+.search-box {
+  background: var(--mainPink);
+  color: var(--mainWhite);
+}
+ .single-item {
+   transition: all 0.28s linear;
+ }
+ .single-item:hover {
+   box-shadow: 6px 12px 28px rgb(0,0,0);
+ }
+ .img-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+ }
+ .store-img {
+   transition: all 0.9s ease-in-out;
+ }
+ .img-container:hover .store-img {
+   transform: scale(1.2);
+ }
+.store-item-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  background: var(--mainPink);
+  border-top-left-radius: 1rem;
+  transition: all 0.9s ease-in-out;
+  transform: translate(100%, 100%);
+  color: var(--mainWhite);
+}
+.img-container:hover .store-item-icon {
+  transform: translate(0, 0);
+}
+.store-item-icon:hover {
+  color:var(--lightblue)
+} 
+/* Services */
+.services {
+  color: var(--mainWhite);
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/img/cc4.jpg') center/cover fixed no-repeat;
+}
+.service-title {
+  letter-spacing: 0.5rem;
+}
+.service-text {
+  word-spacing: 0.5rem;
+}
+/* Order now  */
+.order-cakes {
+  background: linear-gradient(var(--lightbluetrans), var(--yellowTrans)), url('../img/logoIcon.png');;
+  background-attachment: fixed;
+}
+/* Footer  */
+.footer-title {
+  background: var(--secondlightPink);
+}
+.footer-contact {
+  background: var(--lightblue);
+}
+.footer-icon {
+  font-size: 1.9rem;
+  color: var(--mainlightblue);
+  transition: all 0.4s ease-in-out;
+}
+.footer-icon:hover {
+  color: var(--mainPink);
+}
+.contact-details {
+  color: var(--mainPink);
+}
+.icon-link {
+  color: var(--secondlightPink);
+}
+.icon-link2 {
+  color: var(--mainlightblue);
+}
